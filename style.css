@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --bg: #050505;
+  --red: #ff0000;
+  --glow: 0 0 15px #ff0000;
+}
+body {
+  background: var(--bg);
+  color: white;
+  font-family: "Rajdhani", sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 2px solid var(--red);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.logo {
+  font-family: "Orbitron";
+  color: var(--red);
+  font-size: 1.5rem;
+  text-shadow: var(--glow);
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: var(--red);
+  text-shadow: var(--glow);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #1a0000 0%, #050505 100%);
+}
+.main-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid var(--red);
+  box-shadow: var(--glow);
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+.neon-title {
+  font-family: "Orbitron";
+  font-size: clamp(3rem, 10vw, 5rem);
+  text-shadow: var(--glow);
+}
+
+.section {
+  padding: 100px 10%;
+  text-align: center;
+}
+.section-title {
+  font-family: "Orbitron";
+  font-size: 2.5rem;
+  color: var(--red);
+  text-shadow: var(--glow);
+  margin-bottom: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card,
+.about-card {
+  background: #0c0c0c;
+  border: 1px solid #222;
+  padding: 35px;
+  transition: 0.4s;
+}
+.card:hover {
+  border-color: var(--red);
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+.icon {
+  font-size: 3rem;
+  color: var(--red);
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.social-btn {
+  padding: 12px 30px;
+  border: 1px solid var(--red);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.social-btn:hover {
+  background: var(--red);
+  color: black;
+  box-shadow: var(--glow);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input,
+textarea {
+  background: #111;
+  border: 1px solid #333;
+  padding: 15px;
+  color: white;
+  font-family: "Rajdhani";
+}
+input:focus {
+  border-color: var(--red);
+  outline: none;
+}
+.btn-neon {
+  background: none;
+  border: 2px solid var(--red);
+  color: var(--red);
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn-neon:hover {
+  background: var(--red);
+  color: black;
+  box-shadow: var(--glow);
+}
+
+footer {
+  padding: 40px;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
